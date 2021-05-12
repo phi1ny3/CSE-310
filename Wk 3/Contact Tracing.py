@@ -5,7 +5,8 @@ import seaborn as sns
 %matplotlib inline
 import datetime as dt
 from sklearn.cluster import DBSCAN
-df = pd.read_json(‘livedata.json’)
+url = "https://raw.githubusercontent.com/amankharwal/Website-data/master/livedata.json"
+df = pd.read_json(url)
 df.head()
 
 plt.figure(figsize=(8,6))
