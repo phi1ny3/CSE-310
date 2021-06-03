@@ -11,7 +11,16 @@
 
 
 <body id="bg" style="background-image: url('{% static "images/background2.jpg"%}');">
-   <div id="rectangle" style="width:100 px; height:200 px; background-color:black"></div>
-    
+   <div class="row">
+      <div class="column">
+        <img src= {% static "images/black_background.jpg"%} alt="Snow" style="width:10%" class="pictureone">
+      </div>
+      <div class="column">
+        <img src= {% static "images/black_background.jpg"%} alt="Forest" style="width:10%" class="picturetwo">
+      </div>
+      <div class= "column">
+        <img src= {% static "images/black_background.jpg"%} alt="Mountains" style="width:10%" class="picturethree">
+       </div>
+   </div>
 </body>
 </html>

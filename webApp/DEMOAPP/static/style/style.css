@@ -1,13 +1,35 @@
-
-
-
 #bg {
 
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
 
 }
 
-
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    display: inline-block;
+    margin-left: 3px;
+    width: 32%;
+  }
   
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .pictureone {
+      margin-left: 70px;
+  }
+  
+  .picturetwo {
+    margin-left: 105px;
+  }
+
+  .picturethree {
+    margin-left: 140px;
+  }
+
+
