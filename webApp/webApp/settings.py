@@ -55,7 +55,7 @@ ROOT_URLCONF = 'webApp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:\Users\ph1ln\OneDrive\Documents\CSE 310\CSE-310 Group Project\template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
