@@ -1,15 +1,20 @@
 import numpy as np
 import pandas as pd
-import datetime as dt
+import matplotlib.pyplot as plt
+import seaborn as sns
+import datetime as df
 from sklearn.cluster import DBSCAN
-from flask import Flask, request, jsonify
+df = pd.read_json('livedata.json')
+df.head()
 
-app = Flask(__name__)
+# Creates the first plot
+plt.figure(figsize=(8,6))
+sns.scatterplot(x= 'latitude', y= 'longitude', data=df, hue='id')
+plt.legend(bbox_to_anchor= [1, 0.8])
+plt.show()
 
-
+# Function to pull the list of infected names after being run
 def get_infected_names(input_name):
-
-    df = pd.read_json('data.json')
 
     epsilon = 0.0018288 # a radial distance of 6 feet in kilometers
     model = DBSCAN(eps=epsilon, min_samples=2, metric='haversine').fit(df[['latitude', 'longitude']])
@@ -33,14 +38,19 @@ def get_infected_names(input_name):
                     infected_names.append(member_id)
                 else:
                     pass
-    
+
     return infected_names
 
-@app.route('/get_infected')
-def get_infected():
-    input_name = request.args.get('input_name')
-    infected_names = get_infected_names(input_name)
-    return jsonify({"infected_names": infected_names})
+epsilon = 0.0018288
+model = DBSCAN(eps=epsilon, min_samples=2, metric='haversine').fit(df[['latitude', 'longitude']])
+df['cluster'] = model.labels_.tolist()
+labels = model.labels_
+# Displays the second scatterplot and shows the clusters of infection
+fig = plt.figure(figsize=(12,10))
+long = df['longitude']
+lat = df['latitude']
+sns.scatterplot(long, lat, hue = ['cluster-{}'.format(x) for x in labels])
+plt.legend(bbox_to_anchor = [1, 1])
+plt.show()
 
-if __name__ == '__main__':
-    app.run(debug=True)
+print(get_infected_names("Erin"))
