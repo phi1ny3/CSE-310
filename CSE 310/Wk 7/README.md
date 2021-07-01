@@ -19,11 +19,11 @@ There is only two tools that you need, and that's the Android Studio IDE.  The o
 Philip Marvin (mar17118@byui.edu)
 
 link to the demo video:
-https://www.youtube.com/watch?v=acdfgerq2RE
+https://youtu.be/J1YuDBevcDM
 
 
 
 # Future Work
 
 {Make a list of things that you need to fix, improve, and add in the future.}
-* I'm honestly not sure how to improve this app's functionality.  It's more simple and limited than I thought.  Though funnily enough, finding the right settings and making sure the right JDK was the hardest part, I couldn't even get the app to run for the longest time
+* I'm honestly not sure how to improve this app's functionality.  It's more simple and limited than I thought.  Though funnily enough, finding the right settings and making sure the right JDK was the hardest part, I couldn't even get the app to run for the longest time.  Now I got it to work!  Make sure compatibility with AMD is on if your device uses their processors.
