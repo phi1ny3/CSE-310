@@ -5,7 +5,7 @@ Using Amazon Web Services, create a billing alarm
 
 # Development Environment
 ---
-Download the AWS client [here]: (https://clients.amazonworkspaces.com/), or go to the github repository linked.
+Download the AWS client [here]: (https://clients.amazonworkspaces.com/), and make sure to have an email that's usable.
 
 # Useful Websites
 
