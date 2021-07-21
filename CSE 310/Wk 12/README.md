@@ -1,12 +1,12 @@
 # Overview
 ---
-Using QTCreator and Visual Studio, create a simple drawing app that allows you to draw with the mouse
+Using QTCreator and Visual Studio, create a simple drawing app that allows you to draw with the mouse.  You can save, load, and clear your drawings too!  This uses the QT Creator IDE, and is programmed using the C++ language.
 
 
 # Development Environment
 ---
  -Recommended: VS Code or Visual Studio 2019
- -Download QTCreator [here]: (https://www.qt.io/product/development-tools), and make sure to have an email that's usable.  If you want to use it for free, your options are the trial version or open source
+ -Download QTCreator [here]: (https://www.qt.io/product/development-tools), and make sure to have an email that's usable.  If you want to use it for free, your options are the trial version or open source.  Make sure you get 
 
 # Useful Websites
 
